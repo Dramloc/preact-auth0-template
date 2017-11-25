@@ -1,7 +1,7 @@
 import { route } from 'preact-router';
-import auth0 from 'auth0-js';
+import WebAuth from 'auth0-js/src/web-auth';
 
-const auth = new auth0.WebAuth({
+const auth = new WebAuth({
 	domain: '{{ auth0 domain }}',
 	clientID: '{{ auth0 client id }}',
 	redirectUri: 'http://localhost:8080/callback',
