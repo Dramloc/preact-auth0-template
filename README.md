@@ -1,6 +1,6 @@
 # preact-auth0-template
 
-A simple `preact-cli` template for [auth0](https://auth0.com/).
+A simple `preact-cli` template for [auth0](https://auth0.com/). Live demo is available [here](https://preact-auth0.surge.sh/).
 
 ## Usage
 
