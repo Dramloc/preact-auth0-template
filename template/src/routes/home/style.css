@@ -1,0 +1,28 @@
+.home {
+	padding: 56px 20px;
+	min-height: 100%;
+	width: 100%;
+}
+
+.home button {
+	padding: 8px 24px;
+	border-radius: 3px;
+	position: relative;
+	will-change: backgroud-color;
+	transition: background-color 0.2s ease-in-out;
+	background-color: #673AB7;
+	border: 1px solid #58319b;
+	color: #ffffff;
+	cursor: pointer;
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	text-transform: uppercase;
+}
+
+.home button:hover, .home button:focus {
+	background-color: #58319b;
+}
+
+.home button:active {
+	background-color: #3e236e;
+}
