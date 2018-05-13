@@ -11,7 +11,15 @@ import webpack from 'webpack';
 export default function (config, env, helpers) {
 	config.plugins = [
 		...config.plugins,
-		// Fixes `formidable` issue with ssr (https://github.com/felixge/node-formidable/issues/337#issuecomment-153408479)
-		new webpack.DefinePlugin({ 'global.GENTLY': false })
+		new webpack.DefinePlugin({
+			// Fixes `formidable` issue with ssr (https://github.com/felixge/node-formidable/issues/337#issuecomment-153408479)
+			'global.GENTLY': false,
+			// Your auth0 tenant domain
+			'process.env.AUTH0_DOMAIN': JSON.stringify('preact-auth0.eu.auth0.com'),
+			// Your auth0 client id
+			'process.env.AUTH0_CLIENT_ID': JSON.stringify('A7xxu6KsEZx2fezoWJCL043f2SapV0Fw'),
+			// The callback URL for your application
+			'process.env.REDIRECT_URI': JSON.stringify('http://localhost:8080/callback')
+		})
 	];
 }

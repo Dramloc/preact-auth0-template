@@ -16,7 +16,7 @@ Development server runs on port `8080`. If the default port is already in use on
 ## Configure auth0
 
 - Make sure `http://localhost:8080/callback` is an allowed callback URL for your auth0 client.
-- Edit `src/lib/auth/index.js`, replace `{{ auth0 domain }}` and `{{ auth0 client id }}` with your auth0 information.
+- Edit `preact.config.js` and update `process.env.AUTH0_DOMAIN` and `process.env.AUTH0_CLIENT_ID` with your auth0 information.
 
 ## Commands
 

@@ -2,10 +2,10 @@ import { route } from 'preact-router';
 import WebAuth from 'auth0-js/src/web-auth';
 
 const auth = new WebAuth({
-	domain: '{{ auth0 domain }}',
-	clientID: '{{ auth0 client id }}',
-	redirectUri: 'http://localhost:8080/callback',
-	audience: 'https://{{ auth0 domain }}/userinfo',
+	domain: process.env.AUTH0_DOMAIN,
+	clientID: process.env.AUTH0_CLIENT_ID,
+	redirectUri: process.env.REDIRECT_URI,
+	audience: `https://${process.env.AUTH0_DOMAIN}/userinfo`,
 	responseType: 'token id_token',
 	scope: 'openid profile' // only use `openid` if you don't need user profile
 });
