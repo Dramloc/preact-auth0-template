@@ -5,6 +5,10 @@ import Callback from '../routes/callback';
 import Header from './header';
 import Home from '../routes/home';
 
+if (module.hot) {
+	require('preact/debug');
+}
+
 export default function App() {
 	return (
 		<div id="app">
